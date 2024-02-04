@@ -10,16 +10,16 @@ public class Maxwealth {
     }
 
     static int maxwealth(int[][] arr) {
-        int mostWealth = 0;
+        int mostWealth = Integer.MIN_VALUE;
 
         for (int[] row : arr) {
             int money = 0;
-            for (int i = 0; i < row.length; i++) {
-                money = money + row[i];
-                if (money > mostWealth) {
-                    mostWealth = money;
-                }
+            for (int i : row) {
+                money = money + i;
 
+            }
+            if (money > mostWealth) {
+                mostWealth = money;
             }
 
         }
