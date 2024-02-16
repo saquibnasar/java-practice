@@ -6,7 +6,7 @@ public class QuestionTwo {
         // Output should be nested array
         // [[4, a] [1, b] [2, c] [2, a] [1, d][4, e]]
 
-        String[] arr = { "eaaaabccaadeeee" };
+        String[] arr = { "aaaabccaadeeee" };
         findNumberOfChar(arr);
     }
 
@@ -21,14 +21,17 @@ public class QuestionTwo {
         ArrayList<Character> list = new ArrayList<>(10);
 
         int count = 0;
+        String hello = "";
         for (int j = 0; j < name.length(); j++) {
 
             if (j == name.length() - 1 || target != name.charAt(j)) {
                 if (j == name.length() - 1) {
                     count++;
                 }
+                hello = hello + count;
                 ans.add(count);
                 count = 0;
+                hello = hello + target;
                 list.add(target);
             }
 
@@ -37,9 +40,8 @@ public class QuestionTwo {
             count++;
 
         }
+        System.out.println(hello);
 
-        System.out.println(list);
-        System.out.println(ans);
     }
 
 }
