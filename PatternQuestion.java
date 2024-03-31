@@ -2,7 +2,8 @@ public class PatternQuestion {
     public static void main(String[] args) {
 
         // PatternQuestion(5);
-        PatternQuestion1(5);
+        // PatternQuestion1(5);
+        PatternQuestion2(5);
     }
 
     static void PatternQuestion(int n) {
@@ -29,7 +30,7 @@ public class PatternQuestion {
 
     static void PatternQuestion2(int n) {
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
+            for (int j = n - i; j > 0; j--) {
                 System.out.print("*");
             }
 
