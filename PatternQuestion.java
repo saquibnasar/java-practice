@@ -115,4 +115,19 @@ public class PatternQuestion {
 
         }
     }
+
+    static void PatternQuestion9(int n) {
+        int originN = n;
+        n = 2 * n - 2;
+        for (int i = 0; i <= n; i++) {
+
+            for (int j = 0; j <= n; j++) {
+                int atEveryIndex = originN - Math.min(Math.min(i, j), Math.min(n - i, n - j));
+                System.out.print(atEveryIndex + " ");
+            }
+
+            System.out.println();
+
+        }
+    }
 }
