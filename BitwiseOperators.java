@@ -8,4 +8,8 @@ public class BitwiseOperators {
     static int biitwiseOperator() {
         return -1;
     }
+
+    static int bigO() {
+        return -1;
+    }
 }
