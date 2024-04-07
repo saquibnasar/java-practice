@@ -12,4 +12,9 @@ public class BitwiseOperators {
     static int bigO() {
         return -1;
     }
+
+    static int ques1() {
+        return -1;
+    }
+
 }
