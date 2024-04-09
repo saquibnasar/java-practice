@@ -1,6 +1,4 @@
-import java.util.Arrays;
-
-public class TImeSpace {
+public class MedianOfTwoSortedArrays {
     public static void main(String[] args) {
         int[] arr1 = { 1, 3 };
         int[] arr2 = { 2, 4, 5, 6 };
