@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class FindANumberThatDoesNotHaveClone {
     public static void main(String[] args) {
         int[] arr = { 1, 2, 1, 4, 5, 4, 2 };
