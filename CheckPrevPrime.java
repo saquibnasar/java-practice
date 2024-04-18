@@ -1,9 +1,9 @@
 public class CheckPrevPrime {
     public static void main(String[] args) {
 
-        // given a number check all the previous prime number
         int n = 40;
-        prime(n);
+        boolean[] primes = new boolean[n + 1];
+
     }
 
     static void prime(int n) {
