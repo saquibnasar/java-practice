@@ -3,29 +3,24 @@ public class CheckPrevPrime {
 
         int n = 40;
         boolean[] primes = new boolean[n + 1];
+        sieve(n, primes);
 
     }
 
-    static void prime(int n) {
+    static void sieve(int n, boolean[] primes) {
+        for (int i = 2; i * i < n; i++) {
+            if (!primes[i]) {
+                for (int j = i * 2; j <= n; j += i) {
+                    primes[j] = true;
 
-        for (int i = 0; i < n; i++) {
-            isPrime(i);
-        }
-    }
-
-    static void isPrime(int n) {
-        if (n <= 1) {
-            return;
-        }
-        int c = 2;
-        while (c * c <= n) {
-
-            if (n % c == 0) {
-                return;
+                }
             }
-            c++;
-        }
 
-        System.out.println(n);
+        }
+        for (int i = 2; i < primes.length; i++) {
+            if (!primes[i]) {
+                System.out.print(i + " ");
+            }
+        }
     }
 }
