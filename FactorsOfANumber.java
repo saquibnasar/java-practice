@@ -4,8 +4,12 @@ public class FactorsOfANumber {
     public static void main(String[] args) {
         int factor = 20;
         factorsOfANumber(factor);
+
+        // optimised code out of order
         System.out.println("");
         factorsOfANumber2(factor);
+
+        // optimised code in order
         System.out.println("");
         factorsOfANumber3(factor);
     }
