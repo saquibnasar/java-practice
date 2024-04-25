@@ -14,8 +14,11 @@ public class RecursionReverse {
 
     public static void main(String[] args) {
         int num = 1342;
-        recursionReverseWay2(num);
-        System.out.println(sum);
+
+        // recursionReverseWay2(num);
+        // System.out.println(sum);
+
+        System.out.print(recursionReverse3(num));
     }
 
     static int recursionReverse(int num) {
@@ -30,6 +33,23 @@ public class RecursionReverse {
         }
 
         return a + recursionReverse(num / 10);
+    }
+
+    static int helper(int num, int digits) {
+        if (num % 10 == num) {
+            return num;
+        }
+
+        int rem = num % 10;
+
+        return (rem * (int) Math.pow(10, digits - 1)) + helper(num / 10, digits - 1);
+    }
+
+    static int recursionReverse3(int num) {
+
+        int digits = (int) (Math.log10(num)) + 1;
+
+        return helper(num, digits);
     }
 
 }
