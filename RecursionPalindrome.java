@@ -8,13 +8,11 @@ public class RecursionPalindrome {
 
     static boolean recursionPalindrome(int num) {
 
-
-
         return true;
 
     }
 
     static int helper(int num) {
- 
+        return 1;
     }
 }
