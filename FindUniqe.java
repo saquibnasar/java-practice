@@ -7,7 +7,7 @@ public class FindUniqe {
         System.out.println(check);
         int ans = findUniqe(arr);
 
-        // System.out.println(ans);
+        System.out.println(ans);
 
     }
 

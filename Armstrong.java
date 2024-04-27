@@ -5,6 +5,7 @@ public class Armstrong {
 
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
+        in.close();
         boolean ans = armstrong(n);
         System.out.println(ans);
 

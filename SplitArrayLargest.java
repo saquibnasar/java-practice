@@ -7,8 +7,6 @@ public class SplitArrayLargest {
     }
 
     static int splitArrayLargest(int[] arr, int mValue) {
-        int m = mValue;
-
         int ans = 0;
         int a = 0;
         for (int j = 0; j < arr.length - 1; j++) {

@@ -10,7 +10,7 @@ public class Largest {
         int num2 = a.nextInt();
         int num3 = a.nextInt();
         int big = num1;
-
+        a.close();
         if (big < num2) {
             big = num2;
             if (big < num3) {

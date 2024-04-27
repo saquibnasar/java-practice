@@ -6,6 +6,7 @@ public class Occurences {
         Scanner in = new Scanner(System.in);
         System.out.print("Please Enter a number ");
         int num = in.nextInt();
+        in.close();
         int comprareNum = 13454324;
 
         int loop = String.valueOf(comprareNum).length();
