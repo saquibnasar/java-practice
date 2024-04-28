@@ -1,7 +1,10 @@
 public class BinarySearch {
     public static void main(String[] args) {
-        int[] arr = { -8, -6, -4, -2, 0, 2, 4, 6, 8 };
-        int target = 3;
+
+        // https://leetcode.com/problems/binary-search/description/
+
+        int[] arr = { -1, 0, 3, 5, 9, 12 };
+        int target = 9;
         int ans = binarySearch(arr, target);
         System.out.println(ans);
     }
