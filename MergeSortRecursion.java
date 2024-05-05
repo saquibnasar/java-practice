@@ -3,7 +3,8 @@ import java.util.Arrays;
 public class MergeSortRecursion {
     public static void main(String[] args) {
         // https://leetcode.com/problems/merge-sorted-array/description/
-        int[] arr = { 3, 9, 5, 6, 4, 8 };
+        // int[] arr = { 3, 9, 5, 6, 4, 8 };
+        int[] arr = { 5, 4, 3, 2, 1 };
         System.err.println(Arrays.toString(sort(arr)));
     }
 
@@ -15,7 +16,41 @@ public class MergeSortRecursion {
         int[] left = sort(Arrays.copyOfRange(arr, 0, mid));
         int[] right = sort(Arrays.copyOfRange(arr, mid, arr.length));
 
-        return merge(left, right, new int[left.length + right.length], 0, 0);
+        // return merge(left, right, new int[left.length + right.length], 0, 0);
+        return merge2(left, right);
+    }
+
+    static int[] merge2(int[] first, int[] second) {
+        int[] max = new int[first.length + second.length];
+
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+        while (i < first.length && j < second.length) {
+            if (first[i] < second[j]) {
+                max[k] = first[i];
+                i++;
+            } else {
+                max[k] = second[j];
+                j++;
+            }
+            k++;
+        }
+        // it may be possible that one of the arrays is not complete
+
+        while (i < first.length) {
+            max[k] = first[i];
+            i++;
+            k++;
+        }
+
+        while (j < second.length) {
+            max[k] = second[j];
+            j++;
+            k++;
+        }
+        return max;
     }
 
     static int[] merge(int[] arr1, int[] arr2, int[] merge, int count1, int count2) {
