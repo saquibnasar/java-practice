@@ -2,6 +2,8 @@ import java.util.Arrays;
 
 public class QuickSortRecursion {
     public static void main(String[] args) {
+        // simmer
+        // https://leetcode.com/problems/sort-an-array/description/
         int[] arr = { 10, 80, 30, 90, 40, 50, 70 };
         sort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
