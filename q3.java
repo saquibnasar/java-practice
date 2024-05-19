@@ -4,6 +4,6 @@ public class q3 {
     }
 
     static void q3() {
-
+        int main = 0;
     }
 }
